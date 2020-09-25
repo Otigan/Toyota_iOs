@@ -92,7 +92,12 @@ class HomeViewController: UIViewController {
             let buttonRepair = UIButton(frame: CGRect(x:100, y:100, width:100, height:50))
             
             buttonRepair.setTitle("Ремонт", for: .normal)
-            buttonRepair.setTitleColor(.black, for: .normal)
+            buttonRepair.setTitleColor(.white, for: .normal)
+            if #available(iOS 13.0, *) {
+                buttonRepair.backgroundColor = .systemGray3
+            } else {
+                buttonRepair.backgroundColor = .gray
+            }
             view.addSubview(buttonRepair)
             
         case .контакты:

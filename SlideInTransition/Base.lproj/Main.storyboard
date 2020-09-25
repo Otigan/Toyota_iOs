@@ -239,10 +239,10 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-b4-W9m">
-                                <rect key="frame" x="0.0" y="44" width="414" height="556"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="537"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WbN-NU-qqN">
-                                        <rect key="frame" x="16" y="16" width="390" height="364"/>
+                                        <rect key="frame" x="16" y="16" width="390" height="345"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Um8-lB-Oj0">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
@@ -251,8 +251,8 @@
                                                     <constraint firstAttribute="height" constant="200" id="uir-yr-WN5"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wf6-Mg-nWZ">
-                                                <rect key="frame" x="0.0" y="220" width="390" height="144"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="wf6-Mg-nWZ">
+                                                <rect key="frame" x="0.0" y="220" width="390" height="125"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-bT-b2k" customClass="DesignableView" customModule="SlideInTransition" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="16" width="382" height="50"/>
@@ -289,7 +289,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWn-hL-R7y" customClass="DesignableView" customModule="SlideInTransition" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="86" width="382" height="50"/>
+                                                        <rect key="frame" x="0.0" y="67" width="382" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7w-d2-mSW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -328,7 +328,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gNU-q5-Vu5">
-                                        <rect key="frame" x="16" y="390" width="390" height="158"/>
+                                        <rect key="frame" x="16" y="371" width="390" height="158"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25h-WR-TIz">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -344,6 +344,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pressedLogin:" destination="zPm-kW-R4j" eventType="touchUpInside" id="EM2-1t-1ip"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-Lg-SKq">
                                                 <rect key="frame" x="0.0" y="80" width="382" height="70"/>
@@ -392,6 +395,11 @@
                         <viewLayoutGuide key="safeArea" id="urg-9i-W9S"/>
                     </view>
                     <navigationItem key="navigationItem" id="us9-9I-5bw"/>
+                    <connections>
+                        <outlet property="emailField" destination="XQx-kB-dLd" id="WaI-1g-l3n"/>
+                        <outlet property="loginButton" destination="25h-WR-TIz" id="yoQ-gh-gxH"/>
+                        <outlet property="passField" destination="J7w-d2-mSW" id="Cqf-VZ-94g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNC-B8-RDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
