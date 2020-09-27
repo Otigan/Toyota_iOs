@@ -15,7 +15,10 @@
 		20C8FBE821EAC6D300850BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C8FBE621EAC6D300850BB7 /* LaunchScreen.storyboard */; };
 		20C8FBF021EAC83100850BB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8FBEF21EAC83100850BB7 /* MenuViewController.swift */; };
 		5553CA79251A598000B6A180 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553CA78251A598000B6A180 /* DesignableView.swift */; };
+		559FEB802520DB1100CEB849 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */; };
+		559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FEB8325211D1500CEB849 /* MastersTableViewController.swift */; };
 		55CC357625152FBF009B4A83 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC357525152FBF009B4A83 /* LoginController.swift */; };
+		55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE3545251FD12E0056F7F1 /* RepairViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		20C8FBE921EAC6D300850BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C8FBEF21EAC83100850BB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5553CA78251A598000B6A180 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		559FEB8325211D1500CEB849 /* MastersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastersTableViewController.swift; sourceTree = "<group>"; };
 		55CC357525152FBF009B4A83 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		55DE3545251FD12E0056F7F1 /* RepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				20C8FBEF21EAC83100850BB7 /* MenuViewController.swift */,
 				203835C621EC2F4800D8F86F /* SlideInTransition.swift */,
 				5553CA78251A598000B6A180 /* DesignableView.swift */,
+				55DE3545251FD12E0056F7F1 /* RepairViewController.swift */,
+				559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */,
+				559FEB8325211D1500CEB849 /* MastersTableViewController.swift */,
 			);
 			path = SlideInTransition;
 			sourceTree = "<group>";
@@ -151,11 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C8FBE021EAC6D200850BB7 /* HomeViewController.swift in Sources */,
+				55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */,
 				203835C721EC2F4800D8F86F /* SlideInTransition.swift in Sources */,
 				5553CA79251A598000B6A180 /* DesignableView.swift in Sources */,
+				559FEB802520DB1100CEB849 /* NewsTableViewController.swift in Sources */,
 				20C8FBF021EAC83100850BB7 /* MenuViewController.swift in Sources */,
 				20C8FBDE21EAC6D200850BB7 /* AppDelegate.swift in Sources */,
 				55CC357625152FBF009B4A83 /* LoginController.swift in Sources */,
+				559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

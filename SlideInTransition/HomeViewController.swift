@@ -20,41 +20,45 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                   
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
-        
-        if check == true {
-           
-            
-            addChild(loginVC)
-            //loginVC.view.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(loginVC.view)
-            
-            
-            //NSLayoutConstraint.activate([
-           // loginVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-           // loginVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-           //loginVC.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            //loginVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
-           // ])
-            
-            loginVC.didMove(toParent: self)
-        } else if check == false {
-            for view in self.view.subviews {
-                view.removeFromSuperview()
-            }
-            
-            print("check remove")
-            
+        transitionToNew(.новости)
         }
         
         
-                
-        
-         
-    }
-
+            
+    
+    
+    @objc func clickRepair(sender: UIButton!) {
+                   
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                               
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+                             
+                              
+            loginVC.modalPresentationStyle = .fullScreen
+                              
+                             
+                   if UserDefaults.standard.string(forKey: "token") == nil {
+                       present(loginVC, animated: true)
+                   } else {
+                       print("LOGGED")
+                    
+                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                                     
+                                   let repairVC = storyboard.instantiateViewController(withIdentifier: "RepairViewController") as! RepairViewController
+                    
+                                
+                    self.navigationController?.pushViewController(repairVC, animated: true)
+                                    
+                                    //repairVC.modalPresentationStyle = .fullScreen
+                    
+                        //let nav = UINavigationController(rootViewController: repairVC)
+                    
+                    //nav.modalPresentationStyle = .fullScreen
+                                    
+                                   //present(nav, animated: true)
+                    
+        }
+               }
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
         guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else { return }
         menuViewController.didTapMenuType = { menuType in
@@ -71,20 +75,44 @@ class HomeViewController: UIViewController {
 
         topView?.removeFromSuperview()
         switch menuType {
+            
+        case .новости:
+          
+          let view = UIView()
+                    //view.backgroundColor = .blue
+                    view.frame = self.view.bounds
+                    self.view.addSubview(view)
+                    self.topView = view
+                    
+                    let text = UILabel(frame: CGRect(x:100, y:100, width:100, height:50))
+                    text.text = "News"
+                    view.addSubview(text)
+            
         case .login:
            // let view = UIView()
                   //    view.backgroundColor = .blue
                    //   view.frame = self.view.bounds
                    //   self.view.addSubview(view)
                    //   self.topView =
-            check = true
-            viewDidLoad()
+            //check = true
+            //viewDidLoad()
 
+             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                              
+                   let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
+            
+             
+             self.navigationController?.pushViewController(loginVC, animated: true)
+            
+             //loginVC.modalPresentationStyle = .fullScreen
+             
+            //present(loginVC, animated: true)
+            
             
             
         case .услуги:
-            check = false
-            viewDidLoad()
+        
+            
             let view = UIView()
             view.frame = self.view.bounds
             self.view.addSubview(view)
@@ -98,11 +126,18 @@ class HomeViewController: UIViewController {
             } else {
                 buttonRepair.backgroundColor = .gray
             }
+            
+            buttonRepair.addTarget(self, action: #selector(clickRepair), for: UIControl.Event.touchUpInside)
             view.addSubview(buttonRepair)
             
+            
+        
+            
+           
+            
         case .контакты:
-            check = false
-            viewDidLoad()
+        
+            
             let view = UIView()
             //view.backgroundColor = .blue
             view.frame = self.view.bounds

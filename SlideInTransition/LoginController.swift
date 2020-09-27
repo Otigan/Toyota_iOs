@@ -15,6 +15,10 @@ class LoginController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     
     
+    @IBAction func close() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBOutlet weak var passField: UITextField!
     
     
@@ -35,10 +39,14 @@ class LoginController: UIViewController {
                 let email = emailField.text
                 let pass = passField.text
                 
-                let url = "http://toyotarest.ru/api/login?email=" + email! + "&password=" + pass!
+                let url = "http://toyotarest.ru/api/login"
                 
-                getData(from: url)
+                //getData(from: url)
                 
+                getJSON(from: url, email: email!, password: pass!)
+                
+                close()
+               
             }
             
         } else {
@@ -71,59 +79,72 @@ class LoginController: UIViewController {
 
         // Do any additional setup after loading the
         
+       
+                    
         
     }
     
-   
-    private func getData(from url:String) {
+    private func getJSON(from url:String, email: String, password: String) {
         
-        let session = URLSession(configuration: .default)
         
-        guard let url_login = URL(string : url) else {
-            print("Can't create URL")
+        let urll = URL(string: url)!
+        
+        let parameters = ["email": email, "password": password]
+        
+        var request = URLRequest(url: urll)
+        
+        request.httpMethod = "POST"
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {return}
+        
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) {(data, response, error) in
             
-            return
-        }
-        
-        
-        let task = session.dataTask(with: URLRequest(url: url_login)) {
-            (data, response, error) in
+            if let response = response {
+                print(response)
             
-            guard let data = data, error == nil else {
-                print("Error")
-                
-                return
             }
             
-            var result: LoginSuccess?
+            guard let data = data else { return }
             do {
-                result = try JSONDecoder().decode(LoginSuccess.self, from: data)
-            } catch {
-                print("Error decoding \(error.localizedDescription)")
+                let json = try JSONDecoder().decode(LoginSuccess.self, from: data)
                 
+                print(json.token)
+                
+                UserDefaults.standard.set(json.token, forKey: "token")
+                
+            
+          
+                
+            } catch {
+                print(error)
             }
-            
-            guard let json = result else {
-                return
-            }
-            
-            print(json.token)
-            
-        }
+        }.resume()
+        
+
     
-        task.resume()
     }
+   
+
     
     // MARK: - LoginSuccess
-    struct LoginSuccess: Codable {
-    let success, name, tokenType, token: String
-    let expiresAt: String
-
-        enum CodingKeys: String, CodingKey {
-        case success, name
-        case tokenType = "token_type"
-        case token
-        case expiresAt = "expires_at"
-        }
+    
+    struct LoginSuccess : Codable {
+        var success: String
+        var name: String
+        var token_type: String
+        var token: String
+        var expires_at: String
+    }
+ 
+    struct User : Codable {
+        let id: Int
+        let title: String
+        let body: String
+        
     }
 }
