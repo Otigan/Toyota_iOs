@@ -13,6 +13,7 @@ enum MenuType: Int {
     case новости
     case услуги
     case контакты
+    case автомобили
 }
 
 class MenuViewController: UITableViewController {
@@ -22,21 +23,6 @@ class MenuViewController: UITableViewController {
     @IBOutlet weak var loginCell: UITableViewCell!
     
     
-    
-    
-    @IBAction func gotoLoginClick(_ sender: UIButton) {
-        
-        print("CLICKED")
-        
-        //let story = UIStoryboard(name: "Main", bundle: nil)
-        //let controller = story.instantiateViewController(withIdentifier: "LoginController") as! LoginController
-        
-        //let navigation = UINavigationController(rootViewController: controller)
-        
-        //self.view.addSubview(navigation.view)
-        //self.addChild(navigation)
-        //navigation.didMove(toParent: self)
-    }
     
     var didTapMenuType: ((MenuType) -> Void)?
 

@@ -8,11 +8,85 @@
 
 import UIKit
 
-class RepairViewController: UIViewController {
+class RepairViewController: UIViewController, didTapDelegate, AutoSelectTap, didSelectAutoDelegate{
+    
+    
+    var autoSelected: Bool?
+    
+    var autoRepairSelect: AutoRepairSelectVC?
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! UserAutoCell
+        
+        print(cell.userAutoImage.isAnimating)
+        
+        
+        
+        navigationController?.popViewController(animated: false)
+        
+        autoRepairSelect!.autoSelectField.text = "Selected"
+        
+    }
+    
+ 
+    
+    
+    
+    
+    
+    func tapOnAutoSelect(_ sender: UITextField) {
+        
+        
+        let vc = storyBoard.instantiateViewController(withIdentifier: "UsersAutoTable") as! UsersAutoTable
+        
+        vc.delegate = self
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
+    
+    
+    
+    func masterSelect(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(mastersList.masters[indexPath.row].id)
+        
+        //mastersList.view.removeFromSuperview()
+        //mastersList.removeFromParent()
+        
+        //self.addChild(autoRepairSelect)
+        
+        //self.view.addSubview(autoRepairSelect.view)
+        
+        
+        //autoRepairSelect.didMove(toParent: self)
+        
+        //autoRepairSelect.view.frame = self.view.bounds
+        
+    
+    
+        
+        
+            autoRepairSelect = storyBoard.instantiateViewController(withIdentifier: "AutoRepairSelectVC") as! AutoRepairSelectVC
+                   
+                   autoRepairSelect!.delegate = self
+                   
+                   navigationController?.pushViewController(autoRepairSelect!, animated: false)
+      
+        
+       
+        
+    
+    }
+    
 
     
     
     let mastersList = MastersTableViewController()
+    
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +97,21 @@ class RepairViewController: UIViewController {
                    //text.text = "Masters"
                    //view.addSubview(text)
         
-       
+        self.title = "Masters"
+        
+        //self.navigationController?.navigationBar.topItem?.title = "Masters"
         
         setup()
+        
+        
     }
     
     
     func setup() {
         addChild(mastersList)
         self.view.addSubview(mastersList.view)
+        
+        mastersList.delegate = self
         
         mastersList.didMove(toParent: self)
         

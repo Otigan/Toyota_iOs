@@ -1,31 +1,35 @@
-//
-//  ViewController.swift
-//  SlideInTransition
-//
-//  Created by Gary Tokman on 1/12/19.
-//  Copyright © 2019 Gary Tokman. All rights reserved.
-//
-
 import UIKit
+import SDWebImage
 
-class HomeViewController: UIViewController {
+
+class HomeViewController: UIViewController, didSelectAutoDelegate{
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("HEH")
+    }
+    
 
     let transiton = SlideInTransition()
     var topView: UIView?
     
     let loginVC = LoginController()
-    var check:Bool!
+    
+    var usersAutoTable: UsersAutoTable?
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         transitionToNew(.новости)
-        }
         
+    
+    }
         
             
-    
     
     @objc func clickRepair(sender: UIButton!) {
                    
@@ -77,6 +81,7 @@ class HomeViewController: UIViewController {
         switch menuType {
             
         case .новости:
+          removeChildVC()
           
           let view = UIView()
                     //view.backgroundColor = .blue
@@ -89,6 +94,9 @@ class HomeViewController: UIViewController {
                     view.addSubview(text)
             
         case .login:
+            
+            removeChildVC()
+            
            // let view = UIView()
                   //    view.backgroundColor = .blue
                    //   view.frame = self.view.bounds
@@ -111,7 +119,7 @@ class HomeViewController: UIViewController {
             
             
         case .услуги:
-        
+            removeChildVC()
             
             let view = UIView()
             view.frame = self.view.bounds
@@ -136,7 +144,8 @@ class HomeViewController: UIViewController {
            
             
         case .контакты:
-        
+            
+            removeChildVC()
             
             let view = UIView()
             //view.backgroundColor = .blue
@@ -148,12 +157,55 @@ class HomeViewController: UIViewController {
             text.text = "Contacts"
             view.addSubview(text)
             
+            
+        case .автомобили:
+            
+            //let view = UIView()
+            
+            //view.frame = self.view.bounds
+            //self.view.addSubview(view)
+            //self.topView = view
+            
+            if UserDefaults.standard.string(forKey: "token") == nil {
+                
+                let text = UILabel(frame: CGRect(x:100, y:100, width: 100, height: 50))
+                
+                text.text = "No autos"
+                view.addSubview(text)
+                
+                print("NOT LOGGED IN")
+            } else {
+                
+                usersAutoTable = UsersAutoTable()
+                
+                usersAutoTable?.delegate = self
+                
+                self.view.addSubview(usersAutoTable!.view)
+                
+                self.addChild(usersAutoTable!)
+                
+                usersAutoTable!.didMove(toParent: self)
+                
+            }
+            
         default:
             break
         }
     }
+    
+    
+    func removeChildVC() -> Void {
+        if usersAutoTable != nil {
+            usersAutoTable!.willMove(toParent: nil)
+            usersAutoTable!.view.removeFromSuperview()
+            usersAutoTable!.removeFromParent()
+        }
+        
+    }
 
 }
+    
+
 
 extension HomeViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -166,4 +218,3 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         return transiton
     }
 }
-
