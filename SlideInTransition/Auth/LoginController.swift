@@ -15,10 +15,6 @@ class LoginController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     
     
-    @IBAction func close() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     @IBOutlet weak var passField: UITextField!
     
     
@@ -45,6 +41,8 @@ class LoginController: UIViewController {
                 
                 getJSON(from: url, email: email!, password: pass!)
                 
+                
+                
                 close()
                
             }
@@ -53,6 +51,24 @@ class LoginController: UIViewController {
             
         }
     }
+    
+    
+    
+    @IBAction func gotoRegister(_ sender: Any) {
+        
+        let regVC = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        
+        navigationController?.pushViewController(regVC, animated: true)
+        
+        
+    }
+    
+    
+    
+    func close() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     
     func showToast(message : String, font: UIFont) {
@@ -79,7 +95,7 @@ class LoginController: UIViewController {
 
         // Do any additional setup after loading the
         
-       
+        passField.isSecureTextEntry = true
                     
         
     }
@@ -117,7 +133,7 @@ class LoginController: UIViewController {
                 
                 UserDefaults.standard.set(json.token, forKey: "token")
                 
-            
+                UserDefaults.standard.set(json.name, forKey: "username")
           
                 
             } catch {

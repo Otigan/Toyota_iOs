@@ -10,16 +10,25 @@ import UIKit
 
 class UserAutoCell: UITableViewCell {
 
-    var userAutoImage = UIImageView(frame: CGRect(x:0, y:0, width: 50, height: 150))
+    var userAutoImage = UIImageView()
        
-       
+    var userAutoName = UILabel()
+    
+    var autoID: Int?
 
        override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
            super.init(style: style, reuseIdentifier: reuseIdentifier)
            addSubview(userAutoImage)
+        
+        
+           addSubview(userAutoName)
            
            configureImageView()
+           configureAutoNameView()
+        
+        
            setImageConstraints()
+           setAutoNameLabelConstraints()
        }
        
        required init?(coder: NSCoder) {
@@ -31,6 +40,11 @@ class UserAutoCell: UITableViewCell {
         userAutoImage.layer.cornerRadius = 10
         userAutoImage.clipsToBounds = true
        }
+    
+    func configureAutoNameView() {
+        userAutoName.numberOfLines = 0
+        userAutoName.adjustsFontSizeToFitWidth = true
+    }
        
        func setImageConstraints() {
         
@@ -38,10 +52,21 @@ class UserAutoCell: UITableViewCell {
         
            userAutoImage.translatesAutoresizingMaskIntoConstraints = false
            userAutoImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-           userAutoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 80).isActive = true
-           userAutoImage.heightAnchor.constraint(equalToConstant: 120).isActive = true
+           userAutoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+           userAutoImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
            userAutoImage.widthAnchor.constraint(equalTo: userAutoImage.heightAnchor, multiplier: 16/9).isActive = true
        }
+    
+    
+    func setAutoNameLabelConstraints() {
+        userAutoName.translatesAutoresizingMaskIntoConstraints = false
+           userAutoName.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+           userAutoName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25).isActive = true
+           userAutoName.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        userAutoName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+          
+        
+    }
 
 }

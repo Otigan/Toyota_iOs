@@ -32,7 +32,13 @@ class UsersAutoTable: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        
+        
         tableView.register(UserAutoCell.self, forCellReuseIdentifier: "cell")
+        
+        
+        
+        tableView.rowHeight = 150
         
         tableView.tableFooterView = UIView()
         
@@ -59,6 +65,14 @@ class UsersAutoTable: UITableViewController {
         delegate?.tableView(tableView, didSelectRowAt: indexPath)
           
       }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        getJSON() {
+            self.tableView.reloadData()
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -74,6 +88,11 @@ class UsersAutoTable: UITableViewController {
                let url = URL(string: "http://toyotarest.ru/storage/" + userAutoList[indexPath.row].autoImage)!
                
                cell.userAutoImage.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "thumb-jpg.png"))
+        
+        
+        cell.autoID = userAutoList[indexPath.row].id
+        
+        cell.userAutoName.text = userAutoList[indexPath.row].name
                
                //cell.userAutoImage.image = UIImage(named: "thumb-jpg.png")
                

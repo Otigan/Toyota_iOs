@@ -1,38 +1,45 @@
 //
-//  AutoRepairSelectVC.swift
+//  MileageEnterViewController.swift
 //  SlideInTransition
 //
-//  Created by otigan on 28.09.2020.
+//  Created by otigan on 05.10.2020.
 //  Copyright © 2020 Gary Tokman. All rights reserved.
 //
 
 import UIKit
 
-class AutoRepairSelectVC: UIViewController {
 
+
+protocol MileageEnter: class {
+    func mileageEntered(_ sender: Any)
+}
+
+
+class MileageEnterViewController: UIViewController {
+
+    @IBOutlet weak var mileageField: UITextField!
     
     
-    @IBOutlet weak var autoSelectField: UITextField!
+    
+    @IBOutlet weak var confirmMileage: UIButton!
     
     
-    @IBOutlet weak var timeSelectField: UITextField!
+    weak var delegate: MileageEnter?
     
-    weak var delegate: AutoSelectTap?
-    
-    
-   
-    @IBAction func tapActionSelect(_ sender: UITextField) {
-        delegate?.tapOnAutoSelect(sender)
-        
-        print("zzzzz")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.autoSelectField.isUserInteractionEnabled = false
+        // Do any additional setup after loading the view.
     }
     
+    
+    
+    
+    @IBAction func enteredMileage(_ sender: Any) {
+        
+        delegate?.mileageEntered(sender)
+    }
     
     
 
@@ -46,8 +53,4 @@ class AutoRepairSelectVC: UIViewController {
     }
     */
 
-}
-
-protocol AutoSelectTap: class {
-    func tapOnAutoSelect(_ sender: UITextField)
 }

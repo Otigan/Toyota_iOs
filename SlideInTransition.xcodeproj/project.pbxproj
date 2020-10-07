@@ -20,11 +20,19 @@
 		55687E4A2524C0BA007D46C2 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 55687E492524C0BA007D46C2 /* SDWebImageMapKit */; };
 		55687E532524D2AE007D46C2 /* thumb-jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55687E522524D2AE007D46C2 /* thumb-jpg.png */; };
 		55978A852522397400850066 /* MastersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55978A842522397400850066 /* MastersListCell.swift */; };
-		559FEB802520DB1100CEB849 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */; };
+		5597DE23252E12930012E580 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5597DE22252E12930012E580 /* RegisterViewController.swift */; };
 		559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FEB8325211D1500CEB849 /* MastersTableViewController.swift */; };
 		55BDA5742528D1D600C21925 /* UsersAutoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDA5732528D1D600C21925 /* UsersAutoTable.swift */; };
 		55CC357625152FBF009B4A83 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC357525152FBF009B4A83 /* LoginController.swift */; };
 		55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE3545251FD12E0056F7F1 /* RepairViewController.swift */; };
+		55E1CB10252CD19E0087CD2A /* AutoAddConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1CB0F252CD19E0087CD2A /* AutoAddConfirmViewController.swift */; };
+		55E1CB13252D0A310087CD2A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1CB12252D0A310087CD2A /* NewsTableViewCell.swift */; };
+		55E1CB15252D0B740087CD2A /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1CB14252D0B740087CD2A /* NewsTableViewController.swift */; };
+		55E34143252B7C050099E51B /* AddAutoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E34142252B7C050099E51B /* AddAutoController.swift */; };
+		55E34149252B88EF0099E51B /* VinEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E34148252B88EF0099E51B /* VinEnterViewController.swift */; };
+		55E3414B252B8C8A0099E51B /* GetAutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3414A252B8C8A0099E51B /* GetAutosTableViewController.swift */; };
+		55E3414D252B8DB70099E51B /* GetAutosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3414C252B8DB70099E51B /* GetAutosTableViewCell.swift */; };
+		55E34151252BAF1D0099E51B /* MileageEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E34150252BAF1D0099E51B /* MileageEnterViewController.swift */; };
 		55EBFC7E25227AAF006A0B79 /* AutoRepairSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +51,19 @@
 		55687E4E2524CA6A007D46C2 /* SlideInTransition-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlideInTransition-Bridging-Header.h"; sourceTree = "<group>"; };
 		55687E522524D2AE007D46C2 /* thumb-jpg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumb-jpg.png"; path = "../../thumb-jpg.png"; sourceTree = "<group>"; };
 		55978A842522397400850066 /* MastersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastersListCell.swift; sourceTree = "<group>"; };
-		559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		5597DE22252E12930012E580 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		559FEB8325211D1500CEB849 /* MastersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastersTableViewController.swift; sourceTree = "<group>"; };
 		55BDA5732528D1D600C21925 /* UsersAutoTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAutoTable.swift; sourceTree = "<group>"; };
 		55CC357525152FBF009B4A83 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		55DE3545251FD12E0056F7F1 /* RepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
+		55E1CB0F252CD19E0087CD2A /* AutoAddConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAddConfirmViewController.swift; sourceTree = "<group>"; };
+		55E1CB12252D0A310087CD2A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		55E1CB14252D0B740087CD2A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		55E34142252B7C050099E51B /* AddAutoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAutoController.swift; sourceTree = "<group>"; };
+		55E34148252B88EF0099E51B /* VinEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinEnterViewController.swift; sourceTree = "<group>"; };
+		55E3414A252B8C8A0099E51B /* GetAutosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutosTableViewController.swift; sourceTree = "<group>"; };
+		55E3414C252B8DB70099E51B /* GetAutosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutosTableViewCell.swift; sourceTree = "<group>"; };
+		55E34150252BAF1D0099E51B /* MileageEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileageEnterViewController.swift; sourceTree = "<group>"; };
 		55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRepairSelectVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,27 +99,67 @@
 		20C8FBDC21EAC6D200850BB7 /* SlideInTransition */ = {
 			isa = PBXGroup;
 			children = (
+				5597DE25252E136A0012E580 /* Repair_Service */,
+				5597DE24252E12990012E580 /* Auto_add */,
+				5597DE21252E126B0012E580 /* Auth */,
+				55E1CB11252D09ED0087CD2A /* News */,
 				20C8FBDD21EAC6D200850BB7 /* AppDelegate.swift */,
 				20C8FBDF21EAC6D200850BB7 /* HomeViewController.swift */,
 				20C8FBE121EAC6D200850BB7 /* Main.storyboard */,
-				55CC357525152FBF009B4A83 /* LoginController.swift */,
 				20C8FBE421EAC6D300850BB7 /* Assets.xcassets */,
 				20C8FBE621EAC6D300850BB7 /* LaunchScreen.storyboard */,
 				20C8FBE921EAC6D300850BB7 /* Info.plist */,
 				20C8FBEF21EAC83100850BB7 /* MenuViewController.swift */,
 				203835C621EC2F4800D8F86F /* SlideInTransition.swift */,
 				5553CA78251A598000B6A180 /* DesignableView.swift */,
-				55DE3545251FD12E0056F7F1 /* RepairViewController.swift */,
 				55687E522524D2AE007D46C2 /* thumb-jpg.png */,
-				559FEB7F2520DB1100CEB849 /* NewsTableViewController.swift */,
-				559FEB8325211D1500CEB849 /* MastersTableViewController.swift */,
-				55978A842522397400850066 /* MastersListCell.swift */,
-				55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */,
 				55687E442524B461007D46C2 /* UserAutoCell.swift */,
 				55687E4E2524CA6A007D46C2 /* SlideInTransition-Bridging-Header.h */,
 				55BDA5732528D1D600C21925 /* UsersAutoTable.swift */,
 			);
 			path = SlideInTransition;
+			sourceTree = "<group>";
+		};
+		5597DE21252E126B0012E580 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				55CC357525152FBF009B4A83 /* LoginController.swift */,
+				5597DE22252E12930012E580 /* RegisterViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5597DE24252E12990012E580 /* Auto_add */ = {
+			isa = PBXGroup;
+			children = (
+				55E3414A252B8C8A0099E51B /* GetAutosTableViewController.swift */,
+				55E3414C252B8DB70099E51B /* GetAutosTableViewCell.swift */,
+				55E34148252B88EF0099E51B /* VinEnterViewController.swift */,
+				55E1CB0F252CD19E0087CD2A /* AutoAddConfirmViewController.swift */,
+				55E34150252BAF1D0099E51B /* MileageEnterViewController.swift */,
+				55E34142252B7C050099E51B /* AddAutoController.swift */,
+			);
+			path = Auto_add;
+			sourceTree = "<group>";
+		};
+		5597DE25252E136A0012E580 /* Repair_Service */ = {
+			isa = PBXGroup;
+			children = (
+				559FEB8325211D1500CEB849 /* MastersTableViewController.swift */,
+				55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */,
+				55DE3545251FD12E0056F7F1 /* RepairViewController.swift */,
+				55978A842522397400850066 /* MastersListCell.swift */,
+			);
+			path = Repair_Service;
+			sourceTree = "<group>";
+		};
+		55E1CB11252D09ED0087CD2A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				55E1CB12252D0A310087CD2A /* NewsTableViewCell.swift */,
+				55E1CB14252D0B740087CD2A /* NewsTableViewController.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,15 +247,23 @@
 			files = (
 				20C8FBE021EAC6D200850BB7 /* HomeViewController.swift in Sources */,
 				55978A852522397400850066 /* MastersListCell.swift in Sources */,
+				55E1CB13252D0A310087CD2A /* NewsTableViewCell.swift in Sources */,
 				55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */,
+				55E34149252B88EF0099E51B /* VinEnterViewController.swift in Sources */,
+				55E34151252BAF1D0099E51B /* MileageEnterViewController.swift in Sources */,
 				203835C721EC2F4800D8F86F /* SlideInTransition.swift in Sources */,
+				55E1CB10252CD19E0087CD2A /* AutoAddConfirmViewController.swift in Sources */,
+				55E1CB15252D0B740087CD2A /* NewsTableViewController.swift in Sources */,
+				5597DE23252E12930012E580 /* RegisterViewController.swift in Sources */,
 				5553CA79251A598000B6A180 /* DesignableView.swift in Sources */,
 				55687E452524B461007D46C2 /* UserAutoCell.swift in Sources */,
-				559FEB802520DB1100CEB849 /* NewsTableViewController.swift in Sources */,
 				20C8FBF021EAC83100850BB7 /* MenuViewController.swift in Sources */,
 				20C8FBDE21EAC6D200850BB7 /* AppDelegate.swift in Sources */,
 				55EBFC7E25227AAF006A0B79 /* AutoRepairSelectVC.swift in Sources */,
+				55E34143252B7C050099E51B /* AddAutoController.swift in Sources */,
 				55CC357625152FBF009B4A83 /* LoginController.swift in Sources */,
+				55E3414B252B8C8A0099E51B /* GetAutosTableViewController.swift in Sources */,
+				55E3414D252B8DB70099E51B /* GetAutosTableViewCell.swift in Sources */,
 				55BDA5742528D1D600C21925 /* UsersAutoTable.swift in Sources */,
 				559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */,
 			);

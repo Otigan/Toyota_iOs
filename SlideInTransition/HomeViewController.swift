@@ -2,7 +2,14 @@ import UIKit
 import SDWebImage
 
 
-class HomeViewController: UIViewController, didSelectAutoDelegate{
+class HomeViewController: UIViewController, didSelectAutoDelegate, DetailedNewsProtocol{
+    
+    
+    
+    func showDetailNews(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("detail news")
+    }
+    
     
     
     
@@ -18,13 +25,18 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
     
     var usersAutoTable: UsersAutoTable?
 
-
+    var newsTable: NewsTableViewController?
+    
+    var checkNewsChildView = false
+    
+    var checkUserAutosChildView = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         transitionToNew(.новости)
+                
         
     
     }
@@ -82,20 +94,21 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
             
         case .новости:
           removeChildVC()
+       
+         
+            addNewsChildView()
           
-          let view = UIView()
-                    //view.backgroundColor = .blue
-                    view.frame = self.view.bounds
-                    self.view.addSubview(view)
-                    self.topView = view
-                    
-                    let text = UILabel(frame: CGRect(x:100, y:100, width:100, height:50))
-                    text.text = "News"
-                    view.addSubview(text)
             
         case .login:
             
             removeChildVC()
+            removeNewsChildVC()
+            
+            
+           
+            transitionToNew(.новости)
+            
+        
             
            // let view = UIView()
                   //    view.backgroundColor = .blue
@@ -104,7 +117,9 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
                    //   self.topView =
             //check = true
             //viewDidLoad()
-
+            
+            
+            
              let storyboard = UIStoryboard(name: "Main", bundle: nil)
                               
                    let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginController") as! LoginController
@@ -120,7 +135,10 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
             
         case .услуги:
             removeChildVC()
+            removeNewsChildVC()
             
+            
+                        
             let view = UIView()
             view.frame = self.view.bounds
             self.view.addSubview(view)
@@ -144,8 +162,9 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
            
             
         case .контакты:
-            
+       
             removeChildVC()
+            removeNewsChildVC()
             
             let view = UIView()
             //view.backgroundColor = .blue
@@ -165,8 +184,16 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
             //view.frame = self.view.bounds
             //self.view.addSubview(view)
             //self.topView = view
+            removeNewsChildVC()
             
             if UserDefaults.standard.string(forKey: "token") == nil {
+                
+                
+                let view = UIView()
+                
+                view.frame = self.view.bounds
+                self.view.addSubview(view)
+                self.topView = view
                 
                 let text = UILabel(frame: CGRect(x:100, y:100, width: 100, height: 50))
                 
@@ -176,30 +203,147 @@ class HomeViewController: UIViewController, didSelectAutoDelegate{
                 print("NOT LOGGED IN")
             } else {
                 
-                usersAutoTable = UsersAutoTable()
-                
-                usersAutoTable?.delegate = self
-                
-                self.view.addSubview(usersAutoTable!.view)
-                
-                self.addChild(usersAutoTable!)
-                
-                usersAutoTable!.didMove(toParent: self)
+                addUsersAutoChildView()
+               
                 
             }
+            
+        case .профиль:
+            
+            removeChildVC()
+            removeNewsChildVC()
+            
+            let view = UIView()
+            
+            view.frame = self.view.bounds
+            self.view.addSubview(view)
+            self.topView = view
+            
+            let label = UILabel(frame: CGRect(x: 100, y:100, width: 100, height: 150))
+            label.text = "PROFILE"
+            view.addSubview(label)
+            
+            let button = UIButton(frame: CGRect(x:150, y:150, width: 200, height: 200))
+            button.backgroundColor = .gray
+            button.titleLabel?.text = "Log out"
+            button.addTarget(self, action: #selector(logOut), for: .touchDown)
+            view.addSubview(button)
+            
             
         default:
             break
         }
     }
     
+    @objc func logOut() {
+        
+        
+        UserDefaults.standard.removeObject(forKey: "token")
+        transitionToNew(.новости)
+    }
+    
+    @objc func addAuto() {
+        
+        
+        let addAutoController = storyboard?.instantiateViewController(withIdentifier: "AddAutoController") as! AddAutoController
+        
+        self.navigationController?.pushViewController(addAutoController, animated: true)
+        
+    }
+    
+    
+    func addNewsChildView() {
+        
+            if checkNewsChildView == false {
+                
+                    newsTable = NewsTableViewController()
+                                             
+                                          newsTable?.delegate = self
+                                             
+                                             self.view.addSubview(newsTable!.view)
+                                             
+                                             self.addChild(newsTable!)
+                                             
+                                             newsTable!.didMove(toParent: self)
+                
+                checkNewsChildView = true
+                
+    
+        }
+        
+      
+        
+        
+        
+        
+    }
+    
+    
+    
+    func addUsersAutoChildView() {
+        
+        
+        if checkUserAutosChildView == false {
+            
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAuto))
+             
+            
+             usersAutoTable = UsersAutoTable()
+             
+             usersAutoTable?.delegate = self
+             
+             self.view.addSubview(usersAutoTable!.view)
+             
+             self.addChild(usersAutoTable!)
+             
+             usersAutoTable!.didMove(toParent: self)
+            
+            
+            checkUserAutosChildView = true
+            
+        }
+        
+        
+        
+    }
     
     func removeChildVC() -> Void {
-        if usersAutoTable != nil {
+        
+   
+        
+        
+        if checkUserAutosChildView == true {
             usersAutoTable!.willMove(toParent: nil)
             usersAutoTable!.view.removeFromSuperview()
             usersAutoTable!.removeFromParent()
+            
+            
+            usersAutoTable = nil
+            navigationItem.rightBarButtonItem = nil
+            
+            checkUserAutosChildView = false
+            
         }
+        
+    }
+    
+    func removeNewsChildVC() -> Void {
+     
+        
+        if checkNewsChildView != nil {
+            if checkNewsChildView == true {
+               
+               newsTable!.willMove(toParent: nil)
+                              newsTable!.view.removeFromSuperview()
+                              newsTable!.removeFromParent()
+                              newsTable = nil
+                
+                checkNewsChildView = false
+                
+            }
+        }
+        
         
     }
 
