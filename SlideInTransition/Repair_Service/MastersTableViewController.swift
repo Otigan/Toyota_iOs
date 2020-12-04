@@ -72,7 +72,6 @@ class MastersTableViewController: UITableViewController {
         
         delegate?.masterSelect(tableView, didSelectRowAt: indexPath)
         
-        print(masters[indexPath.row].name)
         
     }
   

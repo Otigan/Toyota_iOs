@@ -38,7 +38,7 @@ class UsersAutoTable: UITableViewController {
         
         
         
-        tableView.rowHeight = 150
+        //tableView.rowHeight = 200
         
         tableView.tableFooterView = UIView()
         
@@ -86,23 +86,46 @@ class UsersAutoTable: UITableViewController {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserAutoCell
                
                let url = URL(string: "http://toyotarest.ru/storage/" + userAutoList[indexPath.row].autoImage)!
+        
+        print(userAutoList[indexPath.row].autoImage)
                
+    
+
+        
+        cell.userAutoImage.frame.size = CGSize(width: tableView.frame.width, height: 150)
+        
+        print(cell.frame.width)
+        
+        
+        cell.userAutoImage.contentMode = .scaleAspectFill
+        
+        
+
                cell.userAutoImage.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "thumb-jpg.png"))
         
+        let imageRatio = CGFloat(cell.userAutoImage.frame.width / cell.userAutoImage.frame.height)
+        
+        tableView.rowHeight = (tableView.frame.width / imageRatio) + 50
+        
+    
         
         cell.autoID = userAutoList[indexPath.row].id
         
         cell.userAutoName.text = userAutoList[indexPath.row].name
+        
+        cell.userAutoName.translatesAutoresizingMaskIntoConstraints = false
+        
+        cell.userAutoName.topAnchor.constraint(equalTo: cell.userAutoImage.bottomAnchor).isActive = true
                
                //cell.userAutoImage.image = UIImage(named: "thumb-jpg.png")
                
                return cell
         
-        
-        
     }
     
-
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -192,7 +215,6 @@ class UsersAutoTable: UITableViewController {
     
     }
 }
-
 
 
 

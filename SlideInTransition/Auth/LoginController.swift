@@ -10,8 +10,33 @@ import UIKit
 import Foundation
 
 
+protocol onLogged:class {
+    func onLoginPress()
+}
+
+
 class LoginController: UIViewController {
 
+   
+    var delegate: onLogged?
+    
+    
+    var success = false
+    
+    var checkRegister = false
+    
+    var noAuthRepair = false
+    
+    
+    @IBOutlet weak var emailError: UILabel!
+    
+    
+    
+    @IBOutlet weak var passError: UILabel!
+    
+    
+    
+    
     @IBOutlet weak var emailField: UITextField!
     
     
@@ -23,14 +48,13 @@ class LoginController: UIViewController {
     
     @IBAction func pressedLogin(_ sender: Any) {
         
-        
-        let email = emailField.text
-        let pass = passField.text
-        
-        if email != nil && pass != nil {
-            
     
-            if !email!.isEmpty && !pass!.isEmpty  {
+        let emailCheck = validateEmail()
+        
+        let passCheck = validatePass()
+            
+
+            if (emailCheck && passCheck)  {
                 
                 let email = emailField.text
                 let pass = passField.text
@@ -41,13 +65,9 @@ class LoginController: UIViewController {
                 
                 getJSON(from: url, email: email!, password: pass!)
                 
-                
-                
-                close()
-               
-            }
-            
-        } else {
+                    
+        
+            } else {
             
         }
     }
@@ -58,6 +78,13 @@ class LoginController: UIViewController {
         
         let regVC = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
         
+        
+        if noAuthRepair {
+            
+            regVC.noAuthRepair = true
+        }
+        
+        
         navigationController?.pushViewController(regVC, animated: true)
         
         
@@ -65,30 +92,26 @@ class LoginController: UIViewController {
     
     
     
+    
+    
+    
     func close() {
-        navigationController?.popViewController(animated: true)
+        
+        if noAuthRepair {
+            
+            let homeVC = navigationController?.viewControllers.first as! HomeViewController
+            
+            homeVC.fromLoginToServices = true
+            
+            noAuthRepair = false
+        
+        }
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
     
-    func showToast(message : String, font: UIFont) {
-
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
-        toastLabel.font = font
-        toastLabel.textAlignment = .center;
-        toastLabel.text = message
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = 10;
-        toastLabel.clipsToBounds  =  true
-        self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
-             toastLabel.alpha = 0.0
-        }, completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
-        })
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +119,9 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the
         
         passField.isSecureTextEntry = true
+        
+        
+        
                     
         
     }
@@ -136,13 +162,56 @@ class LoginController: UIViewController {
                 UserDefaults.standard.set(json.name, forKey: "username")
           
                 
+                
+                DispatchQueue.main.async {
+                    self.close()
+                }
+                
             } catch {
                 print(error)
+                
+                self.success = false
             }
         }.resume()
         
-
+    }
     
+    func validateEmail() -> Bool {
+        
+        let emailText = emailField.text!
+        
+        if emailText.isEmpty {
+            
+            
+            emailError.text =  "Введите вашу почту"
+            emailError.textColor = .red
+            
+            return false
+        } else {
+            
+            emailError.textColor = .black
+            emailError.text = ""
+            
+            
+            return true
+        }
+    }
+    
+    func validatePass() -> Bool {
+        
+        let passText = passField.text!
+        
+        if passText.isEmpty {
+            
+            passError.textColor = .red
+            passError.text = "Введите пароль"
+            return false
+            
+        } else {
+            passError.textColor = .black
+            passError.text = ""
+            return true
+        }
     }
    
 

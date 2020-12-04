@@ -27,7 +27,7 @@ class GetAutosTableViewCell: UITableViewCell {
            configureAutoNameView()
         
         
-           setImageConstraints()
+           //setImageConstraints()
            setAutoNameLabelConstraints()
        }
        

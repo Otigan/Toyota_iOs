@@ -16,14 +16,24 @@
 		20C8FBF021EAC83100850BB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8FBEF21EAC83100850BB7 /* MenuViewController.swift */; };
 		5553CA79251A598000B6A180 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553CA78251A598000B6A180 /* DesignableView.swift */; };
 		55687E452524B461007D46C2 /* UserAutoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55687E442524B461007D46C2 /* UserAutoCell.swift */; };
-		55687E482524C0BA007D46C2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55687E472524C0BA007D46C2 /* SDWebImage */; };
-		55687E4A2524C0BA007D46C2 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 55687E492524C0BA007D46C2 /* SDWebImageMapKit */; };
+		55687E482524C0BA007D46C2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 55687E472524C0BA007D46C2 /* SwiftPackageProductDependency */; };
+		55687E4A2524C0BA007D46C2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 55687E492524C0BA007D46C2 /* SwiftPackageProductDependency */; };
 		55687E532524D2AE007D46C2 /* thumb-jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55687E522524D2AE007D46C2 /* thumb-jpg.png */; };
 		55978A852522397400850066 /* MastersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55978A842522397400850066 /* MastersListCell.swift */; };
 		5597DE23252E12930012E580 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5597DE22252E12930012E580 /* RegisterViewController.swift */; };
 		559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559FEB8325211D1500CEB849 /* MastersTableViewController.swift */; };
+		55A5E4E32546C56400E92BBB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5E4E22546C56400E92BBB /* ContactsViewController.swift */; };
+		55AC925925468F00007B115C /* ServicesListTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC925825468F00007B115C /* ServicesListTable.swift */; };
+		55AC925B25468FF0007B115C /* ServicesListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC925A25468FF0007B115C /* ServicesListTableCell.swift */; };
+		55B9B0AF256D9D6400663627 /* NewAutosShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9B0AE256D9D6400663627 /* NewAutosShop.swift */; };
 		55BDA5742528D1D600C21925 /* UsersAutoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDA5732528D1D600C21925 /* UsersAutoTable.swift */; };
+		55BE8FD4254DF0920013C0E9 /* DetailedNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE8FD3254DF0920013C0E9 /* DetailedNewsViewController.swift */; };
+		55BF5FE9256D252F00A3C866 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF5FE8256D252F00A3C866 /* CardView.swift */; };
 		55CC357625152FBF009B4A83 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC357525152FBF009B4A83 /* LoginController.swift */; };
+		55CF464F255AE79B00978FC0 /* UISlidingTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF464E255AE79B00978FC0 /* UISlidingTabController.swift */; };
+		55CF4651255AF4C900978FC0 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF4650255AF4C900978FC0 /* ShopViewController.swift */; };
+		55CF4656255AFC8D00978FC0 /* AllAutosShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF4655255AFC8D00978FC0 /* AllAutosShop.swift */; };
+		55CF4658255B027B00978FC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF4657255B027B00978FC0 /* ShopViewCell.swift */; };
 		55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE3545251FD12E0056F7F1 /* RepairViewController.swift */; };
 		55E1CB10252CD19E0087CD2A /* AutoAddConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1CB0F252CD19E0087CD2A /* AutoAddConfirmViewController.swift */; };
 		55E1CB13252D0A310087CD2A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1CB12252D0A310087CD2A /* NewsTableViewCell.swift */; };
@@ -33,7 +43,10 @@
 		55E3414B252B8C8A0099E51B /* GetAutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3414A252B8C8A0099E51B /* GetAutosTableViewController.swift */; };
 		55E3414D252B8DB70099E51B /* GetAutosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3414C252B8DB70099E51B /* GetAutosTableViewCell.swift */; };
 		55E34151252BAF1D0099E51B /* MileageEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E34150252BAF1D0099E51B /* MileageEnterViewController.swift */; };
+		55EAC61F2556DD6900E51AD2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EAC61E2556DD6900E51AD2 /* ChatViewController.swift */; };
+		55EAC6222556F04D00E51AD2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EAC6212556F04D00E51AD2 /* WebKit.framework */; };
 		55EBFC7E25227AAF006A0B79 /* AutoRepairSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */; };
+		B4A7025B0FFE300B1A0DDE6B /* Pods_SlideInTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C40062888266148DB3AEBF /* Pods_SlideInTransition.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +66,18 @@
 		55978A842522397400850066 /* MastersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastersListCell.swift; sourceTree = "<group>"; };
 		5597DE22252E12930012E580 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		559FEB8325211D1500CEB849 /* MastersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastersTableViewController.swift; sourceTree = "<group>"; };
+		55A5E4E22546C56400E92BBB /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		55AC925825468F00007B115C /* ServicesListTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListTable.swift; sourceTree = "<group>"; };
+		55AC925A25468FF0007B115C /* ServicesListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListTableCell.swift; sourceTree = "<group>"; };
+		55B9B0AE256D9D6400663627 /* NewAutosShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAutosShop.swift; sourceTree = "<group>"; };
 		55BDA5732528D1D600C21925 /* UsersAutoTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAutoTable.swift; sourceTree = "<group>"; };
+		55BE8FD3254DF0920013C0E9 /* DetailedNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedNewsViewController.swift; sourceTree = "<group>"; };
+		55BF5FE8256D252F00A3C866 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		55CC357525152FBF009B4A83 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		55CF464E255AE79B00978FC0 /* UISlidingTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISlidingTabController.swift; sourceTree = "<group>"; };
+		55CF4650255AF4C900978FC0 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		55CF4655255AFC8D00978FC0 /* AllAutosShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAutosShop.swift; sourceTree = "<group>"; };
+		55CF4657255B027B00978FC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
 		55DE3545251FD12E0056F7F1 /* RepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairViewController.swift; sourceTree = "<group>"; };
 		55E1CB0F252CD19E0087CD2A /* AutoAddConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAddConfirmViewController.swift; sourceTree = "<group>"; };
 		55E1CB12252D0A310087CD2A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +87,12 @@
 		55E3414A252B8C8A0099E51B /* GetAutosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutosTableViewController.swift; sourceTree = "<group>"; };
 		55E3414C252B8DB70099E51B /* GetAutosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutosTableViewCell.swift; sourceTree = "<group>"; };
 		55E34150252BAF1D0099E51B /* MileageEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileageEnterViewController.swift; sourceTree = "<group>"; };
+		55EAC61E2556DD6900E51AD2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		55EAC6212556F04D00E51AD2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRepairSelectVC.swift; sourceTree = "<group>"; };
+		692A21B36FEB69FF42AB0E5A /* Pods-SlideInTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideInTransition.release.xcconfig"; path = "Target Support Files/Pods-SlideInTransition/Pods-SlideInTransition.release.xcconfig"; sourceTree = "<group>"; };
+		A1C40062888266148DB3AEBF /* Pods_SlideInTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideInTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08D7044F339FF68F19AD61F /* Pods-SlideInTransition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideInTransition.debug.xcconfig"; path = "Target Support Files/Pods-SlideInTransition/Pods-SlideInTransition.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +100,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55687E4A2524C0BA007D46C2 /* SDWebImageMapKit in Frameworks */,
-				55687E482524C0BA007D46C2 /* SDWebImage in Frameworks */,
+				55EAC6222556F04D00E51AD2 /* WebKit.framework in Frameworks */,
+				55687E4A2524C0BA007D46C2 /* BuildFile in Frameworks */,
+				55687E482524C0BA007D46C2 /* BuildFile in Frameworks */,
+				B4A7025B0FFE300B1A0DDE6B /* Pods_SlideInTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +115,8 @@
 			children = (
 				20C8FBDC21EAC6D200850BB7 /* SlideInTransition */,
 				20C8FBDB21EAC6D200850BB7 /* Products */,
+				55EAC6202556F04D00E51AD2 /* Frameworks */,
+				FAFC53F6E1C6C38E61AB28A1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +131,7 @@
 		20C8FBDC21EAC6D200850BB7 /* SlideInTransition */ = {
 			isa = PBXGroup;
 			children = (
+				55CF4652255AFB0700978FC0 /* Shop */,
 				5597DE25252E136A0012E580 /* Repair_Service */,
 				5597DE24252E12990012E580 /* Auto_add */,
 				5597DE21252E126B0012E580 /* Auth */,
@@ -116,6 +149,12 @@
 				55687E442524B461007D46C2 /* UserAutoCell.swift */,
 				55687E4E2524CA6A007D46C2 /* SlideInTransition-Bridging-Header.h */,
 				55BDA5732528D1D600C21925 /* UsersAutoTable.swift */,
+				55A5E4E22546C56400E92BBB /* ContactsViewController.swift */,
+				55BE8FD3254DF0920013C0E9 /* DetailedNewsViewController.swift */,
+				55EAC61E2556DD6900E51AD2 /* ChatViewController.swift */,
+				55CF464E255AE79B00978FC0 /* UISlidingTabController.swift */,
+				55CF4650255AF4C900978FC0 /* ShopViewController.swift */,
+				55BF5FE8256D252F00A3C866 /* CardView.swift */,
 			);
 			path = SlideInTransition;
 			sourceTree = "<group>";
@@ -149,8 +188,20 @@
 				55EBFC7D25227AAF006A0B79 /* AutoRepairSelectVC.swift */,
 				55DE3545251FD12E0056F7F1 /* RepairViewController.swift */,
 				55978A842522397400850066 /* MastersListCell.swift */,
+				55AC925825468F00007B115C /* ServicesListTable.swift */,
+				55AC925A25468FF0007B115C /* ServicesListTableCell.swift */,
 			);
 			path = Repair_Service;
+			sourceTree = "<group>";
+		};
+		55CF4652255AFB0700978FC0 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				55CF4655255AFC8D00978FC0 /* AllAutosShop.swift */,
+				55CF4657255B027B00978FC0 /* ShopViewCell.swift */,
+				55B9B0AE256D9D6400663627 /* NewAutosShop.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		55E1CB11252D09ED0087CD2A /* News */ = {
@@ -162,6 +213,25 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		55EAC6202556F04D00E51AD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55EAC6212556F04D00E51AD2 /* WebKit.framework */,
+				A1C40062888266148DB3AEBF /* Pods_SlideInTransition.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAFC53F6E1C6C38E61AB28A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C08D7044F339FF68F19AD61F /* Pods-SlideInTransition.debug.xcconfig */,
+				692A21B36FEB69FF42AB0E5A /* Pods-SlideInTransition.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C8FBEC21EAC6D300850BB7 /* Build configuration list for PBXNativeTarget "SlideInTransition" */;
 			buildPhases = (
+				93DA86D5DE12411ADBA83AF3 /* [CP] Check Pods Manifest.lock */,
 				20C8FBD621EAC6D200850BB7 /* Sources */,
 				20C8FBD721EAC6D200850BB7 /* Frameworks */,
 				20C8FBD821EAC6D200850BB7 /* Resources */,
+				88B3077466A8C16B2836FBD6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,8 +251,8 @@
 			);
 			name = SlideInTransition;
 			packageProductDependencies = (
-				55687E472524C0BA007D46C2 /* SDWebImage */,
-				55687E492524C0BA007D46C2 /* SDWebImageMapKit */,
+				55687E472524C0BA007D46C2 /* SwiftPackageProductDependency */,
+				55687E492524C0BA007D46C2 /* SwiftPackageProductDependency */,
 			);
 			productName = SlideInTransition;
 			productReference = 20C8FBDA21EAC6D200850BB7 /* SlideInTransition.app */;
@@ -201,7 +273,7 @@
 				TargetAttributes = {
 					20C8FBD921EAC6D200850BB7 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1170;
+						LastSwiftMigration = "";
 					};
 				};
 			};
@@ -215,7 +287,7 @@
 			);
 			mainGroup = 20C8FBD121EAC6D200850BB7;
 			packageReferences = (
-				55687E462524C0BA007D46C2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				55687E462524C0BA007D46C2 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 20C8FBDB21EAC6D200850BB7 /* Products */;
 			projectDirPath = "";
@@ -240,6 +312,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		88B3077466A8C16B2836FBD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlideInTransition/Pods-SlideInTransition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlideInTransition/Pods-SlideInTransition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlideInTransition/Pods-SlideInTransition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93DA86D5DE12411ADBA83AF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlideInTransition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20C8FBD621EAC6D200850BB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,21 +364,32 @@
 				55E1CB13252D0A310087CD2A /* NewsTableViewCell.swift in Sources */,
 				55DE3546251FD12E0056F7F1 /* RepairViewController.swift in Sources */,
 				55E34149252B88EF0099E51B /* VinEnterViewController.swift in Sources */,
+				55CF464F255AE79B00978FC0 /* UISlidingTabController.swift in Sources */,
+				55A5E4E32546C56400E92BBB /* ContactsViewController.swift in Sources */,
+				55AC925925468F00007B115C /* ServicesListTable.swift in Sources */,
 				55E34151252BAF1D0099E51B /* MileageEnterViewController.swift in Sources */,
+				55BF5FE9256D252F00A3C866 /* CardView.swift in Sources */,
 				203835C721EC2F4800D8F86F /* SlideInTransition.swift in Sources */,
 				55E1CB10252CD19E0087CD2A /* AutoAddConfirmViewController.swift in Sources */,
+				55AC925B25468FF0007B115C /* ServicesListTableCell.swift in Sources */,
+				55CF4651255AF4C900978FC0 /* ShopViewController.swift in Sources */,
 				55E1CB15252D0B740087CD2A /* NewsTableViewController.swift in Sources */,
 				5597DE23252E12930012E580 /* RegisterViewController.swift in Sources */,
 				5553CA79251A598000B6A180 /* DesignableView.swift in Sources */,
 				55687E452524B461007D46C2 /* UserAutoCell.swift in Sources */,
 				20C8FBF021EAC83100850BB7 /* MenuViewController.swift in Sources */,
 				20C8FBDE21EAC6D200850BB7 /* AppDelegate.swift in Sources */,
+				55CF4656255AFC8D00978FC0 /* AllAutosShop.swift in Sources */,
 				55EBFC7E25227AAF006A0B79 /* AutoRepairSelectVC.swift in Sources */,
 				55E34143252B7C050099E51B /* AddAutoController.swift in Sources */,
 				55CC357625152FBF009B4A83 /* LoginController.swift in Sources */,
 				55E3414B252B8C8A0099E51B /* GetAutosTableViewController.swift in Sources */,
 				55E3414D252B8DB70099E51B /* GetAutosTableViewCell.swift in Sources */,
+				55EAC61F2556DD6900E51AD2 /* ChatViewController.swift in Sources */,
 				55BDA5742528D1D600C21925 /* UsersAutoTable.swift in Sources */,
+				55BE8FD4254DF0920013C0E9 /* DetailedNewsViewController.swift in Sources */,
+				55B9B0AF256D9D6400663627 /* NewAutosShop.swift in Sources */,
+				55CF4658255B027B00978FC0 /* ShopViewCell.swift in Sources */,
 				559FEB8425211D1500CEB849 /* MastersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +534,7 @@
 		};
 		20C8FBED21EAC6D300850BB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C08D7044F339FF68F19AD61F /* Pods-SlideInTransition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -430,6 +556,7 @@
 		};
 		20C8FBEE21EAC6D300850BB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 692A21B36FEB69FF42AB0E5A /* Pods-SlideInTransition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -472,7 +599,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		55687E462524C0BA007D46C2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		55687E462524C0BA007D46C2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
@@ -483,14 +610,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		55687E472524C0BA007D46C2 /* SDWebImage */ = {
+		55687E472524C0BA007D46C2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55687E462524C0BA007D46C2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 55687E462524C0BA007D46C2 /* RemoteSwiftPackageReference */;
 			productName = SDWebImage;
 		};
-		55687E492524C0BA007D46C2 /* SDWebImageMapKit */ = {
+		55687E492524C0BA007D46C2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55687E462524C0BA007D46C2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 55687E462524C0BA007D46C2 /* RemoteSwiftPackageReference */;
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

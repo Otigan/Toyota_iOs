@@ -128,8 +128,11 @@ class GetAutosTableViewController: UITableViewController {
                
                cell.modelAutoImage.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "thumb-jpg.png"))
         
+        cell.modelAutoImage.frame.size = CGSize(width: cell.frame.width, height: 150)
+        
         cell.modelAutoName.text = autoModels[indexPath.row].name
     
+        cell.modelAutoName.topAnchor.constraint(equalTo: cell.modelAutoImage.bottomAnchor).isActive = true
                
                
                return cell

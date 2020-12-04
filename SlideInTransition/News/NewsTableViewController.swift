@@ -30,7 +30,7 @@ class NewsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
-        let token = UserDefaults.standard.value(forKey: "token")
+        UserDefaults.standard.value(forKey: "token")
         
     
         
@@ -38,7 +38,7 @@ class NewsTableViewController: UITableViewController {
         
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "cell")
         
-           tableView.rowHeight = 150
+          
              
              
              getJSON() {
@@ -69,11 +69,60 @@ class NewsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
         
+    
+        
+        
+        cell.newsImage.frame.size = CGSize(width: tableView.frame.width, height: 150)
+        
+        
+        cell.newsImage.contentMode = .scaleAspectFill
+        
+         let url = URL(string: "http://toyotarest.ru/storage/" + newsList[indexPath.row].image)!
+
+               cell.newsImage.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "thumb-jpg.png"))
+        
+        
+        let imageRatio = CGFloat(cell.newsImage.frame.width / cell.newsImage.frame.height)
+
+        
+        tableView.rowHeight = (tableView.frame.width / imageRatio) + 80
+        
+        
         cell.newsTitle.text = newsList[indexPath.row].title
         
-         let url = URL(string: "http://toyotarest.ru/storage/" + newsList[indexPath.row].image)
-                      
-        cell.newsImage.sd_setImage(with: url, placeholderImage: UIImage(contentsOfFile: "thumb-jpg.png"))
+
+    
+    
+        
+        let formatter = DateFormatter()
+        
+        //let templocale = formatter.locale
+        
+        //formatter.locale = Locale(identifier: "en_US_POSIX")
+        
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+        
+        formatter.timeZone = TimeZone(secondsFromGMT: 3600 * 7)
+        
+        let date = formatter.date(from: newsList[indexPath.row].createdAt)!
+    
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        
+        //formatter.locale = templocale
+        
+        let dateStr = formatter.string(from: date)
+        
+        
+        cell.newsDate.text = dateStr
+        
+        cell.newsTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        cell.newsTitle.topAnchor.constraint(equalTo: cell.newsImage.bottomAnchor).isActive = true
+       
+        cell.newsDate.translatesAutoresizingMaskIntoConstraints = false
+        
+        cell.newsDate.topAnchor.constraint(equalTo: cell.newsTitle.bottomAnchor).isActive = true
+        
 
         return cell
     }

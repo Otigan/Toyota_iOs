@@ -1,0 +1,74 @@
+PODS:
+  - MaterialComponents/AnimationTiming (116.0.0)
+  - MaterialComponents/Availability (116.0.0)
+  - MaterialComponents/BottomNavigation (116.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Elevation (116.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (116.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/NavigationDrawer (116.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Palettes (116.0.0)
+  - MaterialComponents/private/Application (116.0.0)
+  - MaterialComponents/private/Color (116.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (116.0.0)
+  - MaterialComponents/private/UIMetrics (116.0.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/Ripple (116.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (116.0.0)
+  - MaterialComponents/ShadowLayer (116.0.0):
+    - MaterialComponents/ShadowElevations
+  - "MaterialComponents/Tabs+TabBarView (116.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MDFInternationalization
+  - MaterialComponents/Typography (116.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
+
+DEPENDENCIES:
+  - MaterialComponents/BottomNavigation
+  - MaterialComponents/NavigationDrawer
+  - "MaterialComponents/Tabs+TabBarView"
+
+SPEC REPOS:
+  trunk:
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+
+SPEC CHECKSUMS:
+  MaterialComponents: a6cf920307c2864f71e37972620f24c4d14fae8d
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+
+PODFILE CHECKSUM: 70956fe56bcd2505b3d83a6c03626ba8a7f1e10c
+
+COCOAPODS: 1.9.3

@@ -24,12 +24,11 @@ class AddAutoController: UIViewController, ModelSelect, UIPickerViewDelegate, UI
     
     func mileageEntered(_ sender: Any) {
         
-        
-        
+         UserDefaults.standard.set(mileageVC?.mileageField.text, forKey: "selectedMileage")
         let autoAddConf = storyboard?.instantiateViewController(withIdentifier: "AutoAddConfirmViewController") as! AutoAddConfirmViewController
         
         
-        UserDefaults.standard.set(mileageVC?.mileageField.text, forKey: "selectedMileage")
+       
         
 
         navigationController?.pushViewController(autoAddConf, animated: true)

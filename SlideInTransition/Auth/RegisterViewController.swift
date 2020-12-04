@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailErrorLabel: UILabel!
     
     
-
+    var noAuthRepair = false
     
     @IBOutlet weak var passField: UITextField!
     
@@ -41,9 +41,16 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+    
         
         
     }
+    
+    
+    
+
+    
+    
     
     @IBAction func register(_ sender: Any) {
         
@@ -112,6 +119,15 @@ class RegisterViewController: UIViewController {
                    }.resume()
             
             
+            if noAuthRepair {
+                
+        
+                let homeVC = navigationController?.viewControllers.first as! HomeViewController
+                
+                homeVC.fromRegisterToServices = true
+            
+                noAuthRepair = false
+            }
             
             navigationController?.popToRootViewController(animated: true)
         }
@@ -127,10 +143,12 @@ class RegisterViewController: UIViewController {
         if nameField.text!.isEmpty {
             
             nameErrorLabel.text = "Zapolnite eto pole"
+            nameErrorLabel.textColor = .red
             return false
             
         } else {
-            nameErrorLabel.text = ""
+            nameErrorLabel.textColor = .black
+            nameErrorLabel.text = "Введите ваше имя"
             
             return true
         }
@@ -144,17 +162,22 @@ class RegisterViewController: UIViewController {
         if emailText.isEmpty {
             
             emailErrorLabel.text = "Zapolnite"
+            emailErrorLabel.textColor = .red
+            
             
             return false
             
         } else if !emailText.isValidEmail {
             
             emailErrorLabel.text = "NERPAVILNAA"
+            emailErrorLabel.textColor = .red
+            
             
             return false
         } else {
             
-            emailErrorLabel.text = ""
+            emailErrorLabel.textColor = .black
+            emailErrorLabel.text = "Введите электронную почту"
             
             return true
         }
@@ -168,16 +191,22 @@ class RegisterViewController: UIViewController {
         if passText.isEmpty {
             
             passErrorLabel.text = "Zapolnite eto pole"
+            passErrorLabel.textColor = .red
+            
             
             return false
         } else if passText.count < 6{
             
             passErrorLabel.text = "Parol' dojlen byt bolee 6 sym"
+            passErrorLabel.textColor = .red
+            
             return false
             
         } else {
             
-            passErrorLabel.text = ""
+            passErrorLabel.text = "Введите пароль"
+            passErrorLabel.textColor = .black
+            
             return true
         }
     }
@@ -191,18 +220,20 @@ class RegisterViewController: UIViewController {
         if passConfField.text!.isEmpty {
             
             passConfError.text = "Zapolnite eto pole"
+            passConfError.textColor = .red
             
             return false
             
         } else if !passField.text!.elementsEqual(passConfText){
             
             passConfError.text = "PASS mismatch"
+            passConfError.textColor = .red
             
             return false
             
         } else {
-            passConfError.text = ""
-            
+            passConfError.text = "Повторите пароль"
+            passConfError.textColor = .black
             return true
         }
     }

@@ -27,8 +27,8 @@ class UserAutoCell: UITableViewCell {
            configureAutoNameView()
         
         
-           setImageConstraints()
-           setAutoNameLabelConstraints()
+           //setImageConstraints()
+           //setAutoNameLabelConstraints()
        }
        
        required init?(coder: NSCoder) {
@@ -52,7 +52,9 @@ class UserAutoCell: UITableViewCell {
         
            userAutoImage.translatesAutoresizingMaskIntoConstraints = false
            userAutoImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-           userAutoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+           
+    
+        
            userAutoImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
            userAutoImage.widthAnchor.constraint(equalTo: userAutoImage.heightAnchor, multiplier: 16/9).isActive = true

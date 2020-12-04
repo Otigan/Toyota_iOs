@@ -13,6 +13,8 @@ class NewsTableViewCell: UITableViewCell {
     var newsImage = UIImageView()
          
     var newsTitle = UILabel()
+    
+    var newsDate = UILabel()
       
     
 
@@ -22,13 +24,14 @@ class NewsTableViewCell: UITableViewCell {
             
             addSubview(newsImage)
             addSubview(newsTitle)
+            addSubview(newsDate)
              
              configureImageView()
              configureTitleView()
+             configureDate()
           
-          
-             setImageConstraints()
-             setTitleConstraints()
+             //setImageConstraints()
+             //setTitleConstraints()
          }
          
          required init?(coder: NSCoder) {
@@ -45,6 +48,11 @@ class NewsTableViewCell: UITableViewCell {
           newsTitle.numberOfLines = 0
           newsTitle.adjustsFontSizeToFitWidth = true
       }
+    
+    func configureDate() -> Void {
+        newsDate.numberOfLines = 0
+        newsDate.adjustsFontSizeToFitWidth = true
+    }
          
          func setImageConstraints() {
           
@@ -65,8 +73,17 @@ class NewsTableViewCell: UITableViewCell {
              newsTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25).isActive = true
              newsTitle.heightAnchor.constraint(equalToConstant: 80).isActive = true
           newsTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
-            
-          
       }
+    
+    func setDateConstraints() {
+        
+        newsDate.translatesAutoresizingMaskIntoConstraints = false
+           newsDate.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+           newsDate.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25).isActive = true
+           newsDate.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        newsDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        
+        
+    }
 
 }

@@ -14,6 +14,8 @@ enum MenuType: Int {
     case услуги
     case контакты
     case автомобили
+    case чат
+    case магазин
     case профиль
 }
 
